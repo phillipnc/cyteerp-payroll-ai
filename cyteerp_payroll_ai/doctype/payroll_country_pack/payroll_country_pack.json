@@ -1,0 +1,173 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "autoname": "field:country_code",
+  "creation": "2026-09-23 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "country_section",
+    "country_code",
+    "country_name",
+    "region",
+    "currency",
+    "enabled",
+    "status",
+    "rules_section",
+    "rule_set_version",
+    "effective_from",
+    "effective_to",
+    "rules_json",
+    "golden_tests_json",
+    "governance_section",
+    "compliance_owner",
+    "source_authority",
+    "source_reference",
+    "approved_by",
+    "approved_on"
+  ],
+  "fields": [
+    {
+      "fieldname": "country_section",
+      "fieldtype": "Section Break",
+      "label": "Country"
+    },
+    {
+      "fieldname": "country_code",
+      "fieldtype": "Data",
+      "label": "Country Code",
+      "length": 2,
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "country_name",
+      "fieldtype": "Data",
+      "label": "Country Name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "region",
+      "fieldtype": "Data",
+      "label": "Region",
+      "read_only": 1
+    },
+    {
+      "fieldname": "currency",
+      "fieldtype": "Link",
+      "label": "Currency",
+      "options": "Currency",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled"
+    },
+    {
+      "default": "Scaffold",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Scaffold\nPilot\nProduction\nRetired",
+      "reqd": 1
+    },
+    {
+      "fieldname": "rules_section",
+      "fieldtype": "Section Break",
+      "label": "Versioned Rules"
+    },
+    {
+      "fieldname": "rule_set_version",
+      "fieldtype": "Data",
+      "label": "Rule-set Version"
+    },
+    {
+      "fieldname": "effective_from",
+      "fieldtype": "Date",
+      "label": "Effective From"
+    },
+    {
+      "fieldname": "effective_to",
+      "fieldtype": "Date",
+      "label": "Effective To"
+    },
+    {
+      "fieldname": "rules_json",
+      "fieldtype": "Code",
+      "label": "Rules JSON",
+      "options": "JSON"
+    },
+    {
+      "fieldname": "golden_tests_json",
+      "fieldtype": "Code",
+      "label": "Golden Tests JSON",
+      "options": "JSON"
+    },
+    {
+      "fieldname": "governance_section",
+      "fieldtype": "Section Break",
+      "label": "Governance"
+    },
+    {
+      "fieldname": "compliance_owner",
+      "fieldtype": "Data",
+      "label": "Compliance Owner"
+    },
+    {
+      "fieldname": "source_authority",
+      "fieldtype": "Data",
+      "label": "Source Authority"
+    },
+    {
+      "fieldname": "source_reference",
+      "fieldtype": "Small Text",
+      "label": "Source Reference"
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Link",
+      "label": "Approved By",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "approved_on",
+      "fieldtype": "Datetime",
+      "label": "Approved On",
+      "read_only": 1
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "is_submittable": 0,
+  "module": "Payroll AI",
+  "name": "Payroll Country Pack",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "role": "HR Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "country_name",
+  "sort_order": "ASC",
+  "states": [],
+  "title_field": "country_name"
+}

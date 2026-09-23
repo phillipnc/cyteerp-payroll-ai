@@ -1,0 +1,96 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "creation": "2026-09-23 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "enabled",
+    "default_country",
+    "require_human_review",
+    "ai_section",
+    "ai_provider",
+    "ai_endpoint",
+    "ai_model",
+    "send_payroll_data_externally"
+  ],
+  "fields": [
+    {
+      "default": "0",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled"
+    },
+    {
+      "fieldname": "default_country",
+      "fieldtype": "Data",
+      "label": "Default Country",
+      "description": "ISO 3166-1 alpha-2 code, for example ZM or ZW."
+    },
+    {
+      "default": "1",
+      "fieldname": "require_human_review",
+      "fieldtype": "Check",
+      "label": "Require Human Review",
+      "read_only": 1
+    },
+    {
+      "fieldname": "ai_section",
+      "fieldtype": "Section Break",
+      "label": "AI Provider (Optional)"
+    },
+    {
+      "fieldname": "ai_provider",
+      "fieldtype": "Select",
+      "label": "Provider",
+      "options": "Deterministic only\nOpenAI-compatible",
+      "default": "Deterministic only"
+    },
+    {
+      "fieldname": "ai_endpoint",
+      "fieldtype": "Data",
+      "label": "Endpoint"
+    },
+    {
+      "fieldname": "ai_model",
+      "fieldtype": "Data",
+      "label": "Model"
+    },
+    {
+      "default": "0",
+      "fieldname": "send_payroll_data_externally",
+      "fieldtype": "Check",
+      "label": "Send Payroll Data Externally",
+      "description": "Requires an explicit security review and data-processing agreement."
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "issingle": 1,
+  "is_submittable": 0,
+  "module": "Payroll AI",
+  "name": "Payroll AI Settings",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "role": "HR Manager",
+      "share": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
